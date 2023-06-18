@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Space Invaders</title>
+    <link rel="shortcut icon" href="#" />
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+      html,
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding-top: 20px;
+        height: 100dvh;
+        background: black;
+        overflow: hidden;
+      }
+      /* body {
+        margin: 0;
+        overflow: hidden;
+      } */
+      canvas {
+        padding: 0;
+        margin: auto;
+        display: block;
+        /* width: 100%; */
+      }
+      #gameArea {
+        width: 100%;
+        position: static;
+      }
+
+      p {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        left: 15px;
+        top: 15px;
+        font-size: 15px;
+      }
+      /* #game {
+        margin: 0px;
+      } */
+    </style>
+    <script type="text/javascript" src="js/gameLib.js"></script>
+  </head>
+  <body>
+    <!-- <canvas id="game"></canvas> -->
+    <div id="game">
+      <div id="gameOverScreen" style="display: none">
+        <p><span>SCORE : </span><span id="scoreEl">0</span></p>
+      </div>
+      <div id="gameArea"><canvas id="canvas"></canvas></div>
+    </div>
+  </body>
+  <script type="module" type="text/javascript" src="js/game.js"></script>
+</html>
