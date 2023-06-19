@@ -29,8 +29,6 @@ setGame("1200x600");
 game.folder = "assets";
 //file gambar yang dipakai dalam game
 var gambar = {
-  // logo: "logo.png",
-  // startBtn: "tombolStart.png",
   cover: "cover.png",
   playBtn: "btn-play.png",
   maxBtn: "maxBtn.png",
@@ -57,7 +55,6 @@ function halamanCover() {
 function Game() {
   const game = () => {
     checkGameOver();
-    // drawScore();
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
     displayGameOver();
     if (!isGameOver) {
@@ -71,13 +68,9 @@ function Game() {
   const displayGameOver = () => {
     if (isGameOver) {
       let text = didWin ? "YOU WIN" : "GAME OVER";
-      // let textOffset = didWin ? 3.5 : 5;
       if (!didWin) {
         var restartBtn = tombol(dataGambar.restartBtn, 580, 450);
         if (tekan(restartBtn)) {
-          // halamanCover();
-          // isGameOver = false;
-          // jalankan(gameLoop);
           restartGame();
           console.log("restart btn");
         }
@@ -93,7 +86,7 @@ function Game() {
       }
 
       ctx.fillStyle = "white";
-      ctx.font = "70px Copperplate";
+      ctx.font = "80px Copperplate";
       ctx.textAlign = "center";
       ctx.fillText(text, canvas.width / 2, canvas.height / 2);
     }
@@ -105,10 +98,6 @@ function Game() {
   }
 
   const checkGameOver = () => {
-    // if (isGameOver) {
-    //   return;
-    // }
-
     if (enemyBulletController.collideWith(player)) {
       isGameOver = true;
     }
@@ -129,12 +118,9 @@ function Game() {
 }
 
 function setAwal() {
-  // Game();
   Game();
 }
 
-function gameLoop() {
-  // hapusLayar("#67d2d6");
-}
+function gameLoop() {}
 
-// setAwal();
+// github https://github.com/rezznr/space-invader
